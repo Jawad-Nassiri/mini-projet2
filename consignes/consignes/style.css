@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Montserrat;
+}
+
+/* header start  */
+
+.header,.footer{
+    text-align: center;
+    margin-top: 50px;
+}
+.header p{
+    color: brown;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+.header .title::before,
+.header .title::after,
+.footer .footer-title::before,
+.footer .footer-title::after{
+    content: "";
+    width: 500px;
+    height: 2px;
+    display: block;
+    background-color: gray;
+    margin: 10px auto;
+}
+.header .nav-list .list-item{
+    display: flex;
+    justify-content: center;
+}
+.header .nav-list .list-item .item a{
+    color: #000;
+    margin: 10px;
+}
+.header .nav-list .list-item .item a:hover{
+    color: brown;
+}
+
+/* foodDish start  */
+
+.food-dish{
+    height: 500px;
+    margin: 50px 0;
+    background-image: url('img/assiette.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 300px;
+    background-position: 150px 0;
+}
+.food-dish .food-info{
+    text-align: right;
+}
+.food-dish .food-info hr{
+    width: 600px;
+}
+.food-dish .food-info p:first-child{
+    font-size: 18px;
+    font-weight: 900
+}
+.food-dish .food-info .food-des{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* block start  */
+
+.block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.block .text-block,
+.block .img-block{
+    width: 50%;
+}
+.block .text-block{
+    padding: 0 40px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.block .text-block hr{
+    margin: 10px 0;
+}
+.block .text-block span{
+    color: #fff;
+    background-color: #000;
+    padding: 5px 100px 5px 10px;
+    margin-top: 20px;
+    display: block;
+    width: 200px;
+}
+.block .img-block img{
+    width: 100%;
+}
+
+.block .text-block.second,
+.block .text-block.fourth{
+    order: 2;
+}
+.block .img-block.second,
+.block .img-block.fourth{
+    order: 1;
+}
+
+/* footer start  */
+
+.footer{
+    margin: 50px 0 150px 0;
+}
+
+.footer .footer-nav-list .footer-list-item .item{
+    font-weight: 900;
+    letter-spacing: 5px;
+    font-size: 18px;
+}
+
+
+
+/* media query for medium screen device */
+
+@media (max-width: 1024px){
+    .food-dish {
+        padding-right: 70px;
+        background-position: 50px 0;
+    }
+    .block .text-block {
+        padding: 0 20px;
+    }
+    .block .text-block span {
+        margin-top: 5px;
+        width: 100%;
+    }
+}
+
+
+/* media query for small screen device */
+
+@media (max-width: 767px){
+    .header .title::before, .header .title::after, .footer .footer-title::before, .footer .footer-title::after {
+        width: 100%;
+    }
+    .food-dish {
+        background-position: center;
+        background-size: 400px;
+        padding-right: 0px;
+    }
+    .food-dish .food-info {
+        display: none;
+    }
+    .block {
+        flex-direction: column;
+    }
+    .block .text-block {
+        padding: 0 10px;
+        width: 100%;
+        text-align: justify;
+        margin: 20px 0;
+    }
+    .block .text-block span {
+        padding: 5px 100px 5px 10px;
+        margin: 10px 0;
+        width: 100%;
+    }
+    .block .text-block, .block .img-block {
+        width: 100%;
+    }
+    .text-block.first,
+    .text-block.second,
+    .text-block.third,
+    .text-block.fourth{
+        order: 1;
+    }
+    .header, .footer {
+        margin-bottom: 50px;
+    }
+}
+
